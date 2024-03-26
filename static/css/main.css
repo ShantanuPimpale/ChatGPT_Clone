@@ -588,6 +588,11 @@ video {
   margin-right: 2rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -673,7 +678,9 @@ video {
   width: 90%;
 }
 
-
+.w-\[\] {
+  width: ;
+}
 
 .w-\[50\] {
   width: 50;
@@ -771,7 +778,13 @@ video {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#\] {
+  background-color: #;
+}
 
+.bg-\[\#20\] {
+  background-color: #20;
+}
 
 .bg-\[\#202123\] {
   --tw-bg-opacity: 1;
