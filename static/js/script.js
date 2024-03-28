@@ -1,3 +1,18 @@
+// Example POST method implementation:
+async function postData(url = "", data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: "POST", 
+      headers: {
+        "Content-Type": "application/json",
+        
+      },referrerPolicy: "no-referrer", 
+      body: JSON.stringify(data), 
+    });
+    return response.json(); 
+  }
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const sendButton = document.getElementById("sendButton");
     sendButton.addEventListener("click", async () => {
@@ -9,5 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         question1.innerHTML = questionInput;
         question2.innerHTML = questionInput;
+
+        let result = await postData("/api",{"question":questionInput})
+        solution.innerHTML = result.result;
     });
 });
+
+
